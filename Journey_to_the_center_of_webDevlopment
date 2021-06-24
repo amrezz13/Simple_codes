@@ -1,0 +1,52 @@
+1- JS
+  	 A-  Variables:
+         Const:
+            The keyword const is a little misleading.
+            It does not define a constant value. It defines a constant reference to a value.
+            Because of this you can NOT:
+            Reassign a constant value			
+            Reassign a constant array
+            Reassign a constant object
+            But you CAN:
+            Change a constant array
+            Change a constant object 
+            The const keyword was introduced in ES6 (2015).
+            Variables defined with const cannot be Redeclared.
+            Variables defined with const cannot be Reassigned.
+            Variables defined with const have Block Scope.
+
+
+
+	B- Objects:
+			best obect example var myObj = { 
+		  								color: "orange",
+		  								shape: "sphere",
+		  								type: "food",
+		  								eat: function() { return "yummy" } //eat is method can be called as myObj.eat()
+										};
+			other example for objects var savingsAccount = {
+										balance: 1000,
+										interestRatePercent: 1,
+										deposit: function addMoney(amount) {
+											if (amount > 0) {
+												savingsAccount.balance += amount;
+											}
+										},
+										withdraw: function removeMoney(amount) {
+											var verifyBalance = savingsAccount.balance - amount;
+											if (amount > 0 && verifyBalance >= 0) {
+												savingsAccount.balance -= amount;
+											}
+										},
+
+										printAccountSummary: function(){
+											return "Welcome!\nYour balance is currently $1000 and your interest rate is 1%."
+										}
+									};
+									// end of object
+									//what to print in Console will be the message
+									console.log(savingsAccount.printAccountSummary());
+
+		***For accessing properties, you can use either of ["bracket notation"] or .dotNotation.
+		For accessing methods, you can use only .dotNotation. Do not forget to use a pair of ( ) and passing the argument along with the method name e.g. objectName.methodName(argument); while calling.
+
